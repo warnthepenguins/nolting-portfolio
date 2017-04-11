@@ -1,0 +1,76 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	padding-top: 5vmin;
+	background: rgb(0,0,0);
+}
+
+.container-fluid {
+	display: block;
+	margin: 0 auto;
+	width: 90vmin;
+	height: 90vmin;
+	font-size: 0.01em;
+	padding: 2em;
+	  animation-name: fadeIn;
+	  animation-iteration-count: 1;
+	  animation-timing-function: ease-in;
+	  animation-duration: 1.5s;
+}
+
+.column {
+	width: calc(100% / 30);
+	height: 100%;
+	display: inline-block;
+}
+
+.column .dot {
+	width: 100%;
+	height: calc(100% / 30);
+	border: calc(12vmin / 30) solid rgb(0,50,25);
+	display: block;
+	background: rgb(0,100,50);
+	border-radius: 0.01em;
+	transition: background 1200ms ease-in-out,
+				opacity 2s 3s ease-in-out,
+				transform 0.25s 4s ease-in,
+				border-color 0.25s 1.25s ease-in-out;
+}
+
+.tick .column:nth-child(2n - 1) .dot:nth-child(2n - 1),
+.tick .column:nth-child(2n) .dot:nth-child(2n),
+.tock .column:nth-child(2n) .dot:nth-child(2n - 1),
+.tock .column:nth-child(2n - 1) .dot:nth-child(2n) {
+	background: rgb(0,120,50);
+	transition: background 1200ms ease-in-out,
+}
+
+.tick .column:nth-child(2n - 1) .dot:nth-child(2n),
+.tick .column:nth-child(2n) .dot:nth-child(2n - 1),
+.tock .column:nth-child(2n) .dot:nth-child(2n),
+.tock .column:nth-child(2n - 1) .dot:nth-child(2n - 1) {
+	background: rgb(50,155,100);
+	transition: background 1200ms ease-in-out,
+}
+
+.dot:hover {
+	opacity: 0.125;
+	transform: scale(0.25);
+	border-color: transparent;
+	transition: transform 5ms ease-out;
+}

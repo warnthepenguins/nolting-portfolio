@@ -1,0 +1,295 @@
+/*!
+ * SamNolting.com (http://samnolting.com)
+ * Copyright 2014-2017 Samuel Lockwood Nolting.
+ */
+
+
+/* Global styles */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: calc(1em + 1vmin);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Open Sans Condensed", sans-serif;
+	margin: 0;
+}
+
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: bolder;
+	letter-spacing: -0.01em;
+	font-size: calc(3em + 3vmin);
+	text-indent: -0em;
+	margin-left: -2vw;
+	margin-bottom: 4vh;
+}
+
+h2 {
+	font-size: calc(1.1em + 1.1vmin);
+}
+
+h3 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+	font-size: calc(1.5em + 1.5vmin);
+	/*font-size: 2.5em;*/
+	margin-left: -0.5em;
+}
+
+h4 {
+	margin-top: 0.4em;
+	/*font-size: 1.9em;*/
+}
+
+h5,
+h6 {
+	/*font-size: 1.2em;*/
+	line-height: 1.5em;
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	/*font-size: 1.2em;*/
+}
+
+hr {
+	margin: 0.5em 0em 1em -0.5em;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #006633;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #330066;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+.body-content {
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+
+.body-content .html-mobile-background {
+	position: fixed;
+	z-index: -1;
+	background: url(../images/sm_sam_dinosaur_bird.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	width: 100%;
+	min-height: 125%; /* To compensate for mobile browser address bar space */
+	min-height: 125vh;
+	height: 125%;
+}
+
+.content-column {
+	padding: 8vw;
+ 	background: rgba(255,255,255,0.75);
+	border-radius: 20px;
+	width: 60%;
+	max-width: 1400px;
+	margin-left: 35%;
+}
+
+.content-column section {
+	margin: 7vw 0 0;
+}
+
+.row {
+	max-width: 100%;
+}
+
+.col {
+	width: 49%;
+	display: inline-block;
+}
+
+.nav .row {
+	overflow: auto;
+}
+
+.nav .row a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-weight: bolder;
+	padding: 1em;
+}
+
+.nav .pop-left {
+	width: 33%;
+	float: left;
+	left: 0;
+	text-align: right;
+}
+
+.contact .nav .col:first-child .row:first-child,
+.contact .nav .col:first-child .row:first-child a {
+	background: #006633;
+	background-opacity: 1;
+	color: white;
+}
+
+@media screen and (min-width: 901px) {
+	.body-content {
+		background: url(../images/lg_sam_dinosaur_bird.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		min-width: 100%;
+		width: 100vw;
+		width: 100%;
+		min-height: 100%; /* To compensate for mobile browser address bar space */
+		min-height: 100vh;
+		height: 100%;
+	}
+
+	.html-mobile-background {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	h1 {
+		/*font-size: 5.125em;*/
+		margin-left: -0.25em;
+	}
+
+	.content-column {
+		padding: 5em;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+	.content-column {
+		width: 70%;
+		margin-left: 15%;
+		padding: 10vw;
+	}
+}
+
+@media screen and (max-width: 900px) and (min-width: 701px) {
+	.content-column {
+		width: 80%;
+		margin-left: 10%;
+		padding: 10vw;
+		padding-right: 60px;
+	}
+
+	.content-column section {
+		margin: 50px 0;
+	}
+
+	h1 {
+		/*font-size: 4.5em;*/
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.body-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.content-column {
+		border-radius: 0px;
+		padding: 60px 45px;
+		padding-right: 20px;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.content-column section {
+		margin: 5em 0;
+	}
+
+	.col {
+		width: 100%;
+	}
+
+	h1 {
+		/*font-size: 4em;*/
+		margin-left: 5px;
+	}
+
+	h2 {
+		/*font-size: 2.3em;*/
+	}
+
+	h3 {
+		/*font-size: 2.1em;*/
+		margin-left: 5px;
+	}
+
+	h4 {
+		/*font-size: 2em;*/
+	}
+
+	h5,
+	h6,
+	p {
+		/*font-size: 1.2em;*/
+	}
+
+}
+
+
+@media screen and (max-width: 400px) {
+	.content-column {
+		width: 100%;
+		padding: 2px;
+	}
+
+	h1 {
+		/*font-size: 23vw;*/
+		overflow-wrap: break-word;
+		margin-left: 0;
+	}
+
+	h2 {
+		/*font-size: 15vw;*/
+	}
+
+	h3 {
+		/*font-size: 15vw;*/
+		margin-left: 0;
+	}
+
+	h4 {
+		/*font-size: 15vw;*/
+	}
+
+	h5 {
+		/*font-size: 15vw;*/
+	}
+
+	h6, p {
+		/*font-size: 15vw;*/
+	}
+}

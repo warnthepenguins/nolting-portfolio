@@ -1,0 +1,100 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flipLighterDarker {
+  0% {
+  	background: #527030;
+  }
+  100% {
+	background: #64A31C;
+  }
+}
+
+@keyframes flipDarkerLighter {
+  0% {
+  	background: #74B12E;
+  }
+  100% {
+  	background: #527030;
+  }
+}
+
+.container-fluid {
+	width: 100vw;
+	height: 100vh;
+	padding-top: 5vmin;
+	background: rgb(0,0,0);
+}
+
+.text {
+	font-size: 0.75em;
+	width: 100%;
+	background: transparent;
+	color: lightgray;
+	text-align: center;
+}
+
+.animation-box {
+	display: block;
+	margin: 0 auto;
+	width: 90vmin;
+	height: 90vmin;
+	font-size: 0.01em;
+	padding: 2em;
+	animation-name: fadeIn;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+.column {
+	width: calc(100% / 30);
+	height: 100%;
+	display: inline-block;
+}
+
+.column .dot {
+	width: 100%;
+	height: calc(100% / 30);
+	border: calc(12vmin / 30) solid #091001;
+	display: block;
+	background: #091001;
+	border-radius: 0.01em;
+	opacity: 1;
+	transition: opacity 2.4s cubic-bezier(0.73,-0.04, 0.38, 0.9);
+}
+
+.column .dot:hover {
+	opacity: 0.125;
+	transition: opacity 0s;
+}
+
+.column:nth-child(2n - 1) .dot:nth-child(2n - 1),
+.column:nth-child(2n) .dot:nth-child(2n) {
+	animation-name: flipLighterDarker;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.75,-0.15, 0.25, 1.15);
+	animation-direction: alternate;
+	animation-duration: 1.4s;
+}
+
+.column:nth-child(2n - 1) .dot:nth-child(2n),
+.column:nth-child(2n) .dot:nth-child(2n - 1) {
+	animation-name: flipDarkerLighter;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.75,-0.15, 0.25, 1.15);
+	animation-direction: alternate;
+	animation-duration: 1.4s;
+}
